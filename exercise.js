@@ -28,6 +28,11 @@ const duplicateCount = text => {
 // Solution 2
 function duplicateCount(text){
   return (text.toLowerCase().split('').sort().join('').match(/([^])\1+/g) || []).length;
+  // The match() method searches a string for a match against a regular expression, and returns the matches, as an Array object.
+  // /g means global
+  // /()/g means do a global search for anything within the () with alternates
+  // /[]/g means do a global search for anything within the []
+  // ^ stands for at the beginning of the string
 }
 
 // Solution 3
